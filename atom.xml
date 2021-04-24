@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>DylanLi</title>
   
-  <subtitle>A inforvor</subtitle>
+  <subtitle>This is a private place to record the life, learning and thinking of infovor, and I hope it will be one of the bases for me to live and work for it for the rest of my life.&#39;</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
@@ -10,7 +10,7 @@
   <id>http://example.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Dylan Li</name>
     
   </author>
   
