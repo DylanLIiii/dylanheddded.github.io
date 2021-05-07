@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Floating rate bonds and term structure of interest rates</title>
+    <url>/2021/05/07/Floating-rate-bonds-and-term-structure-of-interest-rates/</url>
+    <content><![CDATA[<h3 id="linear-pricing线性定价">Linear pricing(线性定价)</h3>
+<p><strong>Theorem (Linear Pricing)</strong> Suppose there is no arbitrage. Suppose also</p>
+<ul>
+<li>Price of cash flow <span class="math inline">\(C _{A}\)</span> is <span class="math inline">\(p_{A}\)</span></li>
+<li>Price of cash flow <span class="math inline">\(c _{B}\)</span> is <span class="math inline">\(p_{B}\)</span></li>
+</ul>
+<p>Then the price of cash flow that pays <span class="math inline">\(c = c _{A}+ c _{B}\)</span> must be <span class="math inline">\(p_{A}+p_{B}\)</span>.</p>
+<blockquote>
+<p>不满足改定理的定价策略必然会形成套利</p>
+</blockquote>
+<h3 id="floating-interest-rates浮动利率">Floating interest rates(浮动利率)</h3>
+<p>实际上,利率是一个随机量,随着时间而波动.</p>
+<p>作出以下定义 - Let <span class="math inline">\(r_{k}\)</span> denote the per period interest rate over period <span class="math inline">\([k, k+1)\)</span> - The exact value of <span class="math inline">\(r_{k}\)</span> becomes known only at time <span class="math inline">\(k\)</span> - 1-period loans issued in period <span class="math inline">\(k\)</span> to be repaid in period <span class="math inline">\(k+1\)</span> are charged <span class="math inline">\(r_{k}\)</span> - Cash flow of floating rate bond - coupon payment at time <span class="math inline">\(k: r_{k-1} F\)</span>(使用上一期的利率) - face value at time <span class="math inline">\(n: F\)</span> - Goal: Compute the arbitrage-free price <span class="math inline">\(P_{f}\)</span> of the floating rate bond - Split up the cash flows of floating rate bond into simpler cash flows - <span class="math inline">\(p_{k}=\)</span> Price of contract paying <span class="math inline">\(r_{k-1} F\)</span> at time <span class="math inline">\(k\)</span> - <span class="math inline">\(P=\)</span> Price of Principal <span class="math inline">\(F\)</span> at time <span class="math inline">\(n=\frac{F}{(1+r)^{n}}\)</span> Price of floating rate bond <span class="math inline">\(P_{f}=P+\sum_{k=1}^{n} p_{k}\)</span> #### Price of contract that pays <span class="math inline">\(r_{k-1} F\)</span> at time <span class="math inline">\(k\)</span> Cash flow at time <span class="math inline">\(k\)</span> <span class="math display">\[
+\begin{aligned}
+c_{k} &amp;=r_{k-1} F-\alpha\left(1+r_{0}\right)^{k-1}\left(1+r_{k-1}\right)+\alpha\left(1+r_{0}\right)^{k} \\
+&amp;=\underbrace{\left(F-\alpha\left(1+r_{0}\right)^{k-1}\right) r_{k-1}}_{\text {random }}+\underbrace{\alpha r_{0}\left(1+r_{0}\right)^{k-1}}_{\text {deterministic }}
+\end{aligned}
+\]</span> Set <span class="math inline">\(\alpha=\frac{F}{\left(1+r_{0}\right)^{(k-1)}}\)</span>. Then the random term is <span class="math inline">\(0 .\)</span> Net cash flow is now deterministic <span class="math inline">\(\ldots c_{k}=\alpha r_{0}\left(1+r_{0}\right)^{k-1}=F r_{0}\)</span></p>
+<h4 id="price-of-floating-rate-bond">Price of floating rate bond</h4>
+<p><span class="math display">\[
+\begin{aligned}
+P_{f} &amp;=\frac{F}{\left(1+r_{0}\right)^{n}}+\sum_{k=1}^{n} p_{k} \\
+&amp;=\frac{F}{\left(1+r_{0}\right)^{n}}+\sum_{k=1}^{n} \frac{F r_{0}}{\left(1+r_{0}\right)^{k}} \\
+&amp;=\frac{F}{\left(1+r_{0}\right)^{n}}+\frac{F r_{0}}{\left(1+r_{0}\right)} \sum_{k=1}^{n} \frac{1}{\left(1+r_{0}\right)^{k-1}} \\
+&amp;=\frac{F}{\left(1+r_{0}\right)^{n}}+\frac{F r_{0}}{\left(1+r_{0}\right)} \cdot \frac{1-\frac{1}{\left(1+r_{0}\right)^{n}}}{1-\frac{1}{1+r_{0}}} \\
+&amp;=F
+\end{aligned}
+\]</span> The price <span class="math inline">\(P_{f}\)</span> of a floating rate bond is equal to its face value <span class="math inline">\(F\)</span></p>
+<blockquote>
+<p>浮动利率的情况下,无套利的价格为面值</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>RMFE</category>
+      </categories>
+      <tags>
+        <tag>浮动利率</tag>
+        <tag>套利</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Interest rates and fixed income instruments</title>
     <url>/2021/05/07/Interest-rates-and-fixed-income-instruments/</url>
     <content><![CDATA[<h3 id="利率收益">利率收益</h3>
@@ -52,49 +95,6 @@ P V( c ; r)=c_{0}+\frac{c_{1}}{(1+r)}+\frac{c_{2}}{(1+r)^{2}}+\ldots \frac{c_{N}
       <tags>
         <tag>利率</tag>
         <tag>固定收入工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Floating rate bonds and term structure of interest rates</title>
-    <url>/2021/05/07/Floating-rate-bonds-and-term-structure-of-interest-rates/</url>
-    <content><![CDATA[<h3 id="linear-pricing线性定价">Linear pricing(线性定价)</h3>
-<p><strong>Theorem (Linear Pricing)</strong> Suppose there is no arbitrage. Suppose also</p>
-<ul>
-<li>Price of cash flow <span class="math inline">\(C _{A}\)</span> is <span class="math inline">\(p_{A}\)</span></li>
-<li>Price of cash flow <span class="math inline">\(c _{B}\)</span> is <span class="math inline">\(p_{B}\)</span></li>
-</ul>
-<p>Then the price of cash flow that pays <span class="math inline">\(c = c _{A}+ c _{B}\)</span> must be <span class="math inline">\(p_{A}+p_{B}\)</span>.</p>
-<blockquote>
-<p>不满足改定理的定价策略必然会形成套利</p>
-</blockquote>
-<h3 id="floating-interest-rates浮动利率">Floating interest rates(浮动利率)</h3>
-<p>实际上,利率是一个随机量,随着时间而波动.</p>
-<p>作出以下定义 - Let <span class="math inline">\(r_{k}\)</span> denote the per period interest rate over period <span class="math inline">\([k, k+1)\)</span> - The exact value of <span class="math inline">\(r_{k}\)</span> becomes known only at time <span class="math inline">\(k\)</span> - 1-period loans issued in period <span class="math inline">\(k\)</span> to be repaid in period <span class="math inline">\(k+1\)</span> are charged <span class="math inline">\(r_{k}\)</span> - Cash flow of floating rate bond - coupon payment at time <span class="math inline">\(k: r_{k-1} F\)</span>(使用上一期的利率) - face value at time <span class="math inline">\(n: F\)</span> - Goal: Compute the arbitrage-free price <span class="math inline">\(P_{f}\)</span> of the floating rate bond - Split up the cash flows of floating rate bond into simpler cash flows - <span class="math inline">\(p_{k}=\)</span> Price of contract paying <span class="math inline">\(r_{k-1} F\)</span> at time <span class="math inline">\(k\)</span> - <span class="math inline">\(P=\)</span> Price of Principal <span class="math inline">\(F\)</span> at time <span class="math inline">\(n=\frac{F}{(1+r)^{n}}\)</span> Price of floating rate bond <span class="math inline">\(P_{f}=P+\sum_{k=1}^{n} p_{k}\)</span> #### Price of contract that pays <span class="math inline">\(r_{k-1} F\)</span> at time <span class="math inline">\(k\)</span> Cash flow at time <span class="math inline">\(k\)</span> <span class="math display">\[
-\begin{aligned}
-c_{k} &amp;=r_{k-1} F-\alpha\left(1+r_{0}\right)^{k-1}\left(1+r_{k-1}\right)+\alpha\left(1+r_{0}\right)^{k} \\
-&amp;=\underbrace{\left(F-\alpha\left(1+r_{0}\right)^{k-1}\right) r_{k-1}}_{\text {random }}+\underbrace{\alpha r_{0}\left(1+r_{0}\right)^{k-1}}_{\text {deterministic }}
-\end{aligned}
-\]</span> Set <span class="math inline">\(\alpha=\frac{F}{\left(1+r_{0}\right)^{(k-1)}}\)</span>. Then the random term is <span class="math inline">\(0 .\)</span> Net cash flow is now deterministic <span class="math inline">\(\ldots c_{k}=\alpha r_{0}\left(1+r_{0}\right)^{k-1}=F r_{0}\)</span></p>
-<h4 id="price-of-floating-rate-bond">Price of floating rate bond</h4>
-<p><span class="math display">\[
-\begin{aligned}
-P_{f} &amp;=\frac{F}{\left(1+r_{0}\right)^{n}}+\sum_{k=1}^{n} p_{k} \\
-&amp;=\frac{F}{\left(1+r_{0}\right)^{n}}+\sum_{k=1}^{n} \frac{F r_{0}}{\left(1+r_{0}\right)^{k}} \\
-&amp;=\frac{F}{\left(1+r_{0}\right)^{n}}+\frac{F r_{0}}{\left(1+r_{0}\right)} \sum_{k=1}^{n} \frac{1}{\left(1+r_{0}\right)^{k-1}} \\
-&amp;=\frac{F}{\left(1+r_{0}\right)^{n}}+\frac{F r_{0}}{\left(1+r_{0}\right)} \cdot \frac{1-\frac{1}{\left(1+r_{0}\right)^{n}}}{1-\frac{1}{1+r_{0}}} \\
-&amp;=F
-\end{aligned}
-\]</span> The price <span class="math inline">\(P_{f}\)</span> of a floating rate bond is equal to its face value <span class="math inline">\(F\)</span></p>
-<blockquote>
-<p>浮动利率的情况下,无套利的价格为面值</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>RMFE</category>
-      </categories>
-      <tags>
-        <tag>浮动利率</tag>
-        <tag>套利</tag>
       </tags>
   </entry>
   <entry>
