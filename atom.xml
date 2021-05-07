@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-24T08:12:59.910Z</updated>
+  <updated>2021-05-07T11:44:07.094Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,23 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>#fdfdd</title>
-    <link href="http://example.com/2021/04/24/fdfdd/"/>
-    <id>http://example.com/2021/04/24/fdfdd/</id>
-    <published>2021-04-24T08:12:59.000Z</published>
-    <updated>2021-04-24T08:12:59.910Z</updated>
+    <title>无套利</title>
+    <link href="http://example.com/2021/05/07/%20/"/>
+    <id>http://example.com/2021/05/07/%20/</id>
+    <published>2021-05-07T11:01:44.000Z</published>
+    <updated>2021-05-07T11:44:07.094Z</updated>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h2 id="定义">定义</h2><ul><li>套利(arbitrage) 定义: 买入一定的资产并随机卖出(或者相反),利用差价获利的行为</li><li>无套利(no-arbitrage)假设,是金融产品和衍生品定价理论的基本假设——由于市场的流动性和信息透明性,市场熵不存在套利机会,世界上么有免费的午餐!</li><li>单利(simple interest): An amount <span class="math inline">\(A\)</span> invested for <span class="math inline">\(n\)</span> periods at a simple interest rate of <span class="math inline">\(r\)</span> per period is worth <span class="math inline">\(A(1+n \cdot r)\)</span> at maturity. ^697b0a</li><li>复利(compound interest): An amount <span class="math inline">\(A\)</span> invested for <span class="math inline">\(n\)</span> periods at a compound interest rate of <span class="math inline">\(r\)</span> per period is worth <span class="math inline">\(A(1+r)^{n}\)</span> at maturity. ^38a586</li><li>连续复利(Continuous compounding):Continuous compounding corresponds to the situation where the length of the compounding period goes to zero. Therefore, an amount <span class="math inline">\(A\)</span> invested for <span class="math inline">\(y\)</span> years is worth <span class="math inline">\(\lim _{n \rightarrow \infty} A(1+r / n)^{y n}=A e^{r y}\)</span> at maturity. ^52ad8d<ul><li>将时间序列的间隔不断逼近0</li></ul></li></ul><h3 id="无套利定价策略">无套利定价策略</h3><p>利用无套利定价理论为金融产品定价时，常常构造两个相反的投资组合（portfolio），模拟同一个交易的双方，金融产品的定价使得双方均不可能在交易中套利</p><p>对于一份合约,我们定义 - Pay price <span class="math inline">\(p\)</span> at time <span class="math inline">\(t=0\)</span> - Receive <span class="math inline">\(c_{k}\)</span> at time <span class="math inline">\(t=k, k=1, \ldots, T\)</span></p><blockquote><p>clash flow <span class="math inline">\(c_k\)</span> 非负 对于这份合约,存在两种无套利的情况</p></blockquote><ul><li>Weak No-Arbitrage: <span class="math inline">\(c_{k} \geq 0\)</span> for all <span class="math inline">\(k \geq 1 \Rightarrow p \geq 0\)</span><ul><li>弱无套利表示合约未来的收入可以为0</li></ul></li><li>Strong No-Arbitrage: <span class="math inline">\(c_{k} \geq 0\)</span> for all <span class="math inline">\(k \geq 1\)</span> and <span class="math inline">\(c_{\ell}&gt;0\)</span> for some <span class="math inline">\(\ell \Rightarrow p&gt;0\)</span><ul><li>强无套利表示未来合约的收入不能为0(天下没有免费的午餐)</li></ul></li></ul><p>根据无套利原则,我们进行定价 - Construct the following portfolio(投资组合)(对于买方) - Buy the contract at price <span class="math inline">\(p\)</span> - Borrow <span class="math inline">\(A /(1+r)\)</span> at interest rate <span class="math inline">\(r\)</span> - Construct the following portfolio(对于卖方) - Sell the contract at price <span class="math inline">\(p\)</span> - Lend <span class="math inline">\(A /(1+r)\)</span> at interest rate <span class="math inline">\(r\)</span></p><blockquote><p>为了实现双方的无套利,定价必须为<span class="math inline">\(P = A/(1+r)\)</span></p></blockquote>]]></content>
     
     
       
       
-    <summary type="html">
-</summary>
+    <summary type="html">&lt;h2 id=&quot;定义&quot;&gt;定义&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;套利(arbitrage) 定义: 买入一定的资产并随机卖出(或者相反),利用差价获利的行为&lt;/li&gt;
+&lt;li&gt;无套利(no-arbitrage)假设,是金融产品和衍生品定价理论的基本假设——由于市场的流动性和信息透明性,</summary>
       
     
     
     
+    
+    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="套利" scheme="http://example.com/tags/%E5%A5%97%E5%88%A9/"/>
     
   </entry>
   
