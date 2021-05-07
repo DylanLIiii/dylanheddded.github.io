@@ -28,7 +28,7 @@
 <meta property="og:description" content="利率收益  单利[[no-arbitrage(无套利原则)#^697b0a]] 复利[[no-arbitrage(无套利原则)#^38a586]] 连续复利[[no-arbitrage(无套利原则)#^52ad8d]]  现值(Present value) Present Value (PV) assuming interest rate \(r\) per period \[ P V( c ;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-05-07T12:26:44.000Z">
-<meta property="article:modified_time" content="2021-05-07T12:38:31.632Z">
+<meta property="article:modified_time" content="2021-05-07T12:57:21.754Z">
 <meta property="article:author" content="Dylan Li">
 <meta property="article:tag" content="利率">
 <meta property="article:tag" content="固定收入工具">
@@ -241,7 +241,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-05-07 20:26:44 / Modified: 20:38:31" itemprop="dateCreated datePublished" datetime="2021-05-07T20:26:44+08:00">2021-05-07</time>
+      <time title="Created: 2021-05-07 20:26:44 / Modified: 20:57:21" itemprop="dateCreated datePublished" datetime="2021-05-07T20:26:44+08:00">2021-05-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -283,6 +283,7 @@ P V( c ; r)=c_{0}+\frac{c_{1}}{(1+r)}+\frac{c_{2}}{(1+r)^{2}}+\ldots \frac{c_{N}
 <blockquote>
 <p>我们对合约价值做无套利假设,有且仅当合约价值等于现值时无套利实现(<strong>这是借贷利率相同的情况</strong>)</p>
 </blockquote>
+<span id="more"></span>
 <h3 id="different-lending-and-borrowing-rate">Different lending and borrowing rate</h3>
 <p>Can lend at rate <span class="math inline">\(r_{L}\)</span> and borrow rate at rate <span class="math inline">\(r_{B}: r_{L} \leq r_{B}\)</span> - Portfolio: buy contract, and borrow <span class="math inline">\(\frac{c_{k}}{\left(1+r_{B}\right)^{k}}\)</span> for <span class="math inline">\(k\)</span> years, <span class="math inline">\(k=1, \ldots, N\)</span> - Cash flow in year <span class="math inline">\(k: c_{k}-\frac{c_{k}}{\left(1+r_{B}\right)^{k}}\left(1+r_{B}\right)^{k}=0\)</span> for <span class="math inline">\(k \geq 1\)</span> - No-arbitrage: price <span class="math inline">\(=p-c_{0}-\sum_{k=1}^{N} \frac{c_{k}}{\left(1+r_{B}\right)^{k}} \geq 0\)</span> - Lower bound on price <span class="math inline">\(p \geq P V\left( c ; r_{B}\right)\)</span> - Portfolio: sell contract, and lend <span class="math inline">\(\frac{c_{k}}{\left(1+r_{L}\right)^{k}}\)</span> for <span class="math inline">\(k\)</span> years, <span class="math inline">\(k=1, \ldots, N\)</span> Cash flow in year <span class="math inline">\(k:-c_{k}+\frac{c_{k}}{\left(1+r_{L}\right)^{k}}\left(1+r_{L}\right)^{k}=0\)</span> for <span class="math inline">\(k \geq 1\)</span> - No-arbitrage: price <span class="math inline">\(=-p+c_{0}+\sum_{k=1}^{N} \frac{c_{k}}{\left(1+r_{L}\right)^{k}} \geq 0\)</span> - Upper bound on price <span class="math inline">\(p \leq P V\left( c ; r_{L}\right)\)</span> - Bounds on the price <span class="math inline">\(P V\left( c ; r_{B}\right) \leq p \leq P V\left( c ; r_{L}\right)\)</span></p>
 <blockquote>
